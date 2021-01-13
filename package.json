@@ -1,0 +1,12 @@
+{
+  "name": "zxk_utils",
+  "version": "1.0.0",
+  "description": "个人工具类，只是为了方便！",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "chelin",
+  "license": "ISC"
+}
