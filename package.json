@@ -2,11 +2,20 @@
   "name": "zxk_utils",
   "version": "1.0.0",
   "description": "个人工具类，只是为了方便！",
-  "main": "index.js",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/es2015/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:es2015 && npm run build:cjs && npm run build:amd",
+    "build:cjs": "tsc --module commonjs ./src/index.ts --outDir ./lib/cjs",
+    "build:amd": "tsc --module amd ./src/index.ts --outDir ./lib/amd",
+    "build:es2015": "tsc --module es2015 ./src/index.ts --outDir ./lib/es2015"
   },
   "keywords": [],
   "author": "chelin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.15.0",
+    "webpack-cli": "^4.3.1"
+  }
 }
