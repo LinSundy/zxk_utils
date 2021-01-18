@@ -6,7 +6,7 @@
  * @return 返回移除元素后的数组
  * @description 移除数组中指定元素, 并且原
  */
-export function ZXK_ARR_REMOVE_ELEMENT<T>(arr: Array<T>, element: T, is_effect_origin = true) {
+function ARR_REMOVE_ELEMENT<T>(arr: Array<T>, element: T, is_effect_origin = true) {
     let index = arr.indexOf(element);
     if(index < 0) return
     if(!is_effect_origin) {
@@ -16,4 +16,8 @@ export function ZXK_ARR_REMOVE_ELEMENT<T>(arr: Array<T>, element: T, is_effect_o
     } else {
         arr.splice(index, 1)
     }
+}
+
+export default {
+    ARR_REMOVE_ELEMENT
 }
