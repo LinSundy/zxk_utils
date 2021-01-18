@@ -8,6 +8,7 @@
  */
 export function ZXK_ARR_REMOVE_ELEMENT<T>(arr: Array<T>, element: T, is_effect_origin = true) {
     let index = arr.indexOf(element);
+    if(index < 0) return
     if(!is_effect_origin) {
         return  arr.filter((ele => {
             return ele != element
